@@ -26,6 +26,8 @@ extern ConstantString device_name;
 extern ConstantString firmware_name;
 extern const modular_server::FirmwareInfo firmware_info;
 
+enum{CHANNEL_COUNT=2};
+
 extern const bool use_drivers;
 
 // Interrupts
@@ -34,6 +36,21 @@ extern const bool use_drivers;
 
 // Properties
 // Property values must be long, double, bool, long[], double[], bool[], char[], ConstantString *, (ConstantString *)[]
+extern const long channel_count;
+
+extern const long steps_per_position_units_default[CHANNEL_COUNT];
+
+extern const long velocity_max_default[CHANNEL_COUNT];
+
+extern const long velocity_min_default[CHANNEL_COUNT];
+
+extern const long acceleration_max_default[CHANNEL_COUNT];
+
+extern const long home_velocity_default[CHANNEL_COUNT];
+
+extern const long stage_position_min_default[CHANNEL_COUNT];
+
+extern const long stage_position_max_default[CHANNEL_COUNT];
 
 // Parameters
 
