@@ -29,6 +29,15 @@ License:
 ## API NAMES
 
 ```json
+{
+  "id": "getApi",
+  "result": {
+    "firmware": [
+      "ZebrafishTrackerController"
+    ],
+    "verbosity": "NAMES"
+  }
+}
 ```
 
 ## API GENERAL
