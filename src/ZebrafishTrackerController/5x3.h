@@ -16,7 +16,7 @@ namespace zebrafish_tracker_controller
 {
 namespace constants
 {
-// Interrupts
+// Pins
 
 // Units
 

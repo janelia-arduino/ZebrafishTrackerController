@@ -30,7 +30,7 @@ enum{CHANNEL_COUNT=2};
 
 extern const bool use_drivers;
 
-// Interrupts
+// Pins
 
 // Units
 
