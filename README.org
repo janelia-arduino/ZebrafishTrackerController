@@ -1,0 +1,51 @@
+#+TITLE: ZebrafishTrackerController
+#+AUTHOR: Peter Polidoro
+#+EMAIL: peterpolidoro@gmail.com
+
+* Library Information
+  - Author :: Peter Polidoro
+  - License :: BSD
+
+* Ancestors
+
+  [[https://github.com/janelia-arduino/ModularServer][ModularServer]]
+
+  [[https://github.com/janelia-arduino/ModularDeviceBase][ModularDeviceBase]]
+
+  [[https://github.com/janelia-arduino/StepDirController][StepDirController]]
+
+  [[https://github.com/janelia-arduino/StageController][StageController]]
+
+* Clients
+
+* Devices
+
+  [[https://github.com/janelia-modular-devices/modular_device_base.git][modular_device_base]]
+
+  [[https://github.com/janelia-modular-devices/step_dir_controller.git][step_dir_controller]]
+
+* API NAMES
+
+  #+BEGIN_SRC js
+{
+  "id": "getApi",
+  "result": {
+    "firmware": [
+      "ZebrafishTrackerController"
+    ],
+    "verbosity": "NAMES"
+  }
+}
+  #+END_SRC
+
+* API GENERAL
+
+  [[./api/][API GENERAL]]
+
+* More Detailed Modular Device Information
+
+  [[https://github.com/janelia-modular-devices/modular-devices][modular-devices]]
+
+* Library Dependencies
+
+  [[https://github.com/janelia-arduino/arduino-libraries][arduino-libraries]]
