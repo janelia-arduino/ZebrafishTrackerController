@@ -3,7 +3,7 @@
 //
 //
 // Authors:
-// Peter Polidoro polidorop@janelia.hhmi.org
+// Peter Polidoro peterpolidoro@gmail.com
 // ----------------------------------------------------------------------------
 #ifndef ZEBRAFISH_TRACKER_CONTROLLER_3X2_CONSTANTS_H
 #define ZEBRAFISH_TRACKER_CONTROLLER_3X2_CONSTANTS_H
