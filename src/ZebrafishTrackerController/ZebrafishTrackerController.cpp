@@ -24,6 +24,13 @@ void ZebrafishTrackerController::setup()
 
   // Variable Setup
 
+  // Event Controller Setup
+  event_controller_.setup();
+
+  // Clients Setup
+  dac_controller_ptr_ = &(createClientAtAddress(constants::dac_controller_address));
+  dac_controller_ptr_->setName(dac_controller::constants::device_name);
+
   // Set Device ID
   modular_server_.setDeviceName(constants::device_name);
 
@@ -69,6 +76,16 @@ void ZebrafishTrackerController::setup()
   // Functions
 
   // Callbacks
+
+  for (size_t channel=0;channel<constants::CHANNEL_COUNT;++channel)
+  {
+    position_array_prev_.push_back(0);
+  }
+
+  EventId dac_update_event_id = event_controller_.addInfiniteRecurringEventUsingDelay(makeFunctor((Functor1<int> *)0,*this,&ZebrafishTrackerController::updateDacEventHandler),
+                                                                                      constants::dac_update_delay,
+                                                                                      constants::dac_update_period);
+  event_controller_.enable(dac_update_event_id);
 }
 
 // Handlers must be non-blocking (avoid 'delay')
@@ -88,3 +105,30 @@ void ZebrafishTrackerController::setup()
 // modular_server_.property(property_name).setValue(value) value type must match the property default type
 // modular_server_.property(property_name).getElementValue(element_index,value) value type must match the property array element default type
 // modular_server_.property(property_name).setElementValue(element_index,value) value type must match the property array element default type
+
+void ZebrafishTrackerController::updateDacEventHandler(int arg)
+{
+  StageController::PositionArray array = getStagePosition();
+
+  bool position_changed = false;
+  for (size_t channel=0;channel<array.size();++channel)
+  {
+    if (array[channel] != position_array_prev_[channel])
+    {
+      position_changed = true;
+    }
+    position_array_prev_[channel] = array[channel];
+  }
+  if (!position_changed)
+  {
+    return;
+  }
+
+  for (size_t channel=0;channel<array.size();++channel)
+  {
+    long position_shifted = array[channel] - constants::stage_position_midpoint;
+    long dac_value = (position_shifted * constants::dac_value_max) / constants::stage_position_midpoint;
+    array[channel] = dac_value;
+  }
+  dac_controller_ptr_->call(dac_controller::constants::set_dac_values_function_name,array);
+}

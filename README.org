@@ -14,6 +14,8 @@
 
    Modular device zebrafish tracker controller library.
 
+   DAC outputs +/-10V. Stage range 0-100mm. DAC output = 0.2 V/mm (20V/100mm).
+
 * API NAMES
 
   #+BEGIN_SRC js
