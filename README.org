@@ -4,7 +4,7 @@
 
 * Library Information
   - Name :: ZebrafishTrackerController
-  - Version :: 1.0.0
+  - Version :: 1.1.0
   - License :: BSD
   - URL :: https://github.com/janelia-arduino/ZebrafishTrackerController
   - Author :: Peter Polidoro
@@ -44,11 +44,15 @@
 
 * Clients
 
+  [[https://github.com/janelia-arduino/DacController]]
+
 * Devices
 
-  [[https://github.com/janelia-modular-devices/modular_device_base.git]]
+  [[https://github.com/janelia-modular-devices/modular_device_base]]
 
-  [[https://github.com/janelia-modular-devices/step_dir_controller.git]]
+  [[https://github.com/janelia-modular-devices/step_dir_controller]]
+
+  [[https://github.com/janelia-modular-devices/dac_controller]]
 
 * More Detailed Modular Device Information
 
