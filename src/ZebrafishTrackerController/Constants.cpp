@@ -21,13 +21,13 @@ const modular_server::FirmwareInfo firmware_info =
   .name_ptr=&firmware_name,
   .version_major=1,
   .version_minor=1,
-  .version_patch=0,
+  .version_patch=1,
 };
 
 const bool use_drivers = false;
 
 const size_t dac_update_delay = 1000;
-const size_t dac_update_period = 20;
+const size_t dac_update_period = 10;
 
 const long stage_position_midpoint = 50000;
 const long dac_value_max = 32767;
