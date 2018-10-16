@@ -40,10 +40,10 @@ void ZebrafishTrackerController::setup()
 
   // Add Firmware
   modular_server_.addFirmware(constants::firmware_info,
-                              properties_,
-                              parameters_,
-                              functions_,
-                              callbacks_);
+    properties_,
+    parameters_,
+    functions_,
+    callbacks_);
 
   // Properties
   modular_server::Property & channel_count_property = modular_server_.property(step_dir_controller::constants::channel_count_property_name);
@@ -83,8 +83,8 @@ void ZebrafishTrackerController::setup()
   }
 
   EventId dac_update_event_id = event_controller_.addInfiniteRecurringEventUsingDelay(makeFunctor((Functor1<int> *)0,*this,&ZebrafishTrackerController::updateDacEventHandler),
-                                                                                      constants::dac_update_delay,
-                                                                                      constants::dac_update_period);
+    constants::dac_update_delay,
+    constants::dac_update_period);
   event_controller_.enable(dac_update_event_id);
 }
 
