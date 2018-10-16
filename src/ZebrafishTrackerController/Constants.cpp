@@ -26,14 +26,14 @@ const modular_server::FirmwareInfo firmware_info =
 
 const bool use_drivers = false;
 
-const size_t dac_update_delay = 1000;
-const size_t dac_update_period = 10;
+const size_t analog_update_delay = 1000;
+const size_t analog_update_period = 10;
 
 const long stage_position_midpoint = 50000;
-const long dac_value_max = 32767;
+const long analog_value_max = 32767;
 
 // Clients
-const size_t dac_controller_address[1] =
+const size_t analog_controller_address[1] =
 {
   3,
 };

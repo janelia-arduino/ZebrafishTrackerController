@@ -17,7 +17,7 @@
 #include <EventController.h>
 
 #include <ModularClient.h>
-#include <DacController.h>
+#include <AnalogController.h>
 
 #include <ModularServer.h>
 #include <ModularDeviceBase.h>
@@ -40,12 +40,12 @@ private:
   modular_server::Callback callbacks_[zebrafish_tracker_controller::constants::CALLBACK_COUNT_MAX];
 
   EventController<zebrafish_tracker_controller::constants::EVENT_COUNT_MAX> event_controller_;
-  ModularClient * dac_controller_ptr_;
+  ModularClient * analog_controller_ptr_;
 
   StageController::PositionArray position_array_prev_;
 
   // Handlers
-  void updateDacEventHandler(int arg);
+  void updateAnalogEventHandler(int arg);
 
 };
 

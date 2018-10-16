@@ -14,7 +14,7 @@
 
    Modular device zebrafish tracker controller library.
 
-   DAC outputs +/-10V. Stage range 0-100mm. DAC output = 0.2 V/mm (20V/100mm).
+   ANALOG outputs +/-10V. Stage range 0-100mm. ANALOG output = 0.2 V/mm (20V/100mm).
 
 * API NAMES
 
@@ -46,7 +46,7 @@
 
 * Clients
 
-  [[https://github.com/janelia-arduino/DacController]]
+  [[https://github.com/janelia-arduino/AnalogController]]
 
 * Devices
 
@@ -54,7 +54,7 @@
 
   [[https://github.com/janelia-modular-devices/step_dir_controller]]
 
-  [[https://github.com/janelia-modular-devices/dac_controller]]
+  [[https://github.com/janelia-modular-devices/analog_controller]]
 
 * More Detailed Modular Device Information
 

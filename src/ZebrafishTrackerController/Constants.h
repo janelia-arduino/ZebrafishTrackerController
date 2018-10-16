@@ -10,7 +10,7 @@
 #include <ConstantVariable.h>
 #include <StageController.h>
 
-#include <DacController.h>
+#include <AnalogController.h>
 
 
 namespace zebrafish_tracker_controller
@@ -34,14 +34,14 @@ enum{CHANNEL_COUNT=2};
 
 extern const bool use_drivers;
 
-extern const size_t dac_update_delay;
-extern const size_t dac_update_period;
+extern const size_t analog_update_delay;
+extern const size_t analog_update_period;
 
 extern const long stage_position_midpoint;
-extern const long dac_value_max;
+extern const long analog_value_max;
 
 // Clients
-extern const size_t dac_controller_address[1];
+extern const size_t analog_controller_address[1];
 
 // Pins
 
