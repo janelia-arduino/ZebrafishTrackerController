@@ -28,8 +28,7 @@ void ZebrafishTrackerController::setup()
   event_controller_.setup();
 
   // Clients Setup
-  analog_controller_ptr_ = &(createClientAtAddress(constants::analog_controller_address));
-  analog_controller_ptr_->setName(analog_controller::constants::device_name);
+  analog_controller_ptr_ = &(createClientAtAddress(analog_controller::constants::device_name,constants::analog_controller_address));
 
   // Set Device ID
   modular_server_.setDeviceName(constants::device_name);

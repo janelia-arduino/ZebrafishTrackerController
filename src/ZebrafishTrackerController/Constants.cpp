@@ -21,7 +21,7 @@ const modular_server::FirmwareInfo firmware_info =
   .name_ptr=&firmware_name,
   .version_major=1,
   .version_minor=1,
-  .version_patch=1,
+  .version_patch=2,
 };
 
 const bool use_drivers = false;
