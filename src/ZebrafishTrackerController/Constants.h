@@ -3,7 +3,7 @@
 //
 //
 // Authors:
-// Peter Polidoro peterpolidoro@gmail.com
+// Peter Polidoro peter@polidoro.io
 // ----------------------------------------------------------------------------
 #ifndef ZEBRAFISH_TRACKER_CONTROLLER_CONSTANTS_H
 #define ZEBRAFISH_TRACKER_CONTROLLER_CONSTANTS_H
